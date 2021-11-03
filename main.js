@@ -30,6 +30,7 @@ let numberCell = 0 ;
 
 buttPlay.addEventListener('click', function (){
 
+    attempsText.innerHTML = '';
     containerBox.innerHTML = '';
 
     let difficultGrid = difficult.value;
@@ -121,26 +122,32 @@ function clickSquare(square, bomb, attemps, maxAttemps, attempsText, containerBo
     
     if (bomb.includes(number)){
 
+        /* add class bomb */
         square.classList.add('bomb');
+
+        /* function for all bombs */
         clickBomb(bomb, square, attemps, maxAttemps)
 
-        attemps.push(number);
-        attempsText.innerHTML = `Hai perso dopo ${attemps.length} tentativi`;
+        /* stampa game over */
+        attempsText.innerHTML = `Hai perso dopo ${attemps.length} tentativi corretti`;
 
+        /* add class game over */
         containerBox.classList.add('gameOver');
 
     } else {
 
+        /* add class click */
         square.classList.add('click');
 
+        /* push number */
         attemps.push(number);
 
+        /* stampa tentativi rimanenti */
         maxAttemps = maxAttemps - attemps.length;
-        console.log(maxAttemps);
-        
         attempsText.innerHTML = `tentativi rimanenti: ${maxAttemps}`;
     }
 
+    /* win */
     if (attemps.length === maxAttemps) {
         alert('Hai vinto, sei incredibile!')
     }
