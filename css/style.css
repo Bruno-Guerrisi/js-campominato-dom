@@ -1,0 +1,66 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header img{
+    width: 50px;
+    margin-right: 10px;
+}
+header .logo-section{
+    display: flex;
+    align-items: center;
+}
+
+#difficult{
+    width: 150px;
+}
+#playGame{
+    width: 50px;
+}
+
+main {
+    height: 100%;
+    background-color: #7fffd4;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    padding: 10px;
+}
+
+
+
+/* box section */
+.container-box{
+    width: 700px;
+    height: 700px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.square.click{
+    background-color: #6495ed;
+    color: white;
+    cursor: default;
+}
