@@ -33,7 +33,13 @@ main {
     background-color: #7fffd4;
     padding: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+main h3{
+    margin-top: 10px;
 }
 
 footer{
@@ -51,6 +57,10 @@ footer{
     flex-wrap: wrap;
 }
 
+.container-box.gameOver .square{
+    pointer-events: none;
+}
+
 .square{
     display: flex;
     justify-content: center;
@@ -61,6 +71,12 @@ footer{
 
 .square.click{
     background-color: #6495ed;
+    color: white;
+    cursor: default;
+}
+
+.square.bomb{
+    background-color: #ff0000;
     color: white;
     cursor: default;
 }
